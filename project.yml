@@ -1,0 +1,33 @@
+name: MountingAndFraming # The name of the App
+options: # Some general settings for the project
+  createIntermediateGroups: true # If the folders are nested, also nest the groups in Xcode
+#  indentWidth: 4 # indent by 2 spaces
+#  tabWidth: 4 # a tab is 2 spaces
+  bundleIdPrefix: "com.moonShadow"
+targets: # The List of our targets
+  MountingAndFraming:
+    type: application
+    platform: [iOS]
+    platformSuffix: "" # 去掉平台后缀名，否则默认生成的target会带有"_iOS"后缀
+    deploymentTarget: "12.0"
+    sources:
+      - path: MountingAndFraming
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.moonShadow.mountingAndFraming
+        IPHONEOS_DEPLOYMENT_TARGET: 12.0
+        SWIFT_VERSION: 5.0
+        TARGETED_DEVICE_FAMILY: 1 # 1 代表device只有iPhone
+        UILaunchStoryboardName: LaunchScreen
+        MARKETING_VERSION: 0.0.1
+        CURRENT_PROJECT_VERSION: 1
+        LIBRARY_SEARCH_PATHS:
+          - $(inherited)
+        FRAMEWORK_SEARCH_PATHS:
+          - $(inherited)
+        OTHER_SWIFT_FLAGS:
+          - "$(inherited) -D COCOAPODS -D MAF_MOCKING"
+        EXCLUDED_ARCHS[sdk=iphonesimulator*]:
+          - arm64
+        DEBUG_INFORMATION_FORMAT:
+          - "dwarf-with-dsym"
