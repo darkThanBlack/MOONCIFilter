@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65778E52B2D82F3ADD781D28 /* Pods_MOONCIFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632571F6B7D1540B6B17AD8 /* Pods_MOONCIFilter.framework */; };
+		88BB0E4E2A45FEAF00E56F56 /* photoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E4D2A45FEAF00E56F56 /* photoPreview.swift */; };
+		88BB0E502A46B80000E56F56 /* ChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E4F2A46B7FF00E56F56 /* ChainViewController.swift */; };
+		88BB0E522A46B92C00E56F56 /* FilterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E512A46B92C00E56F56 /* FilterModels.swift */; };
+		88BB0E542A46BE4000E56F56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E532A46BE4000E56F56 /* DetailViewController.swift */; };
+		88BB0E562A46F94F00E56F56 /* FilterEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E552A46F94F00E56F56 /* FilterEventBus.swift */; };
 		A2A5F1B02A4308AE00622F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F1AF2A4308AE00622F83 /* AppDelegate.swift */; };
 		A2A5F1B22A4308AE00622F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F1B12A4308AE00622F83 /* SceneDelegate.swift */; };
 		A2A5F1B92A4308AF00622F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F1B82A4308AF00622F83 /* Assets.xcassets */; };
@@ -15,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0632571F6B7D1540B6B17AD8 /* Pods_MOONCIFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOONCIFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81484E0364CC0D67D4D20762 /* Pods-MOONCIFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOONCIFilter.debug.xcconfig"; path = "Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter.debug.xcconfig"; sourceTree = "<group>"; };
+		88BB0E4D2A45FEAF00E56F56 /* photoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoPreview.swift; sourceTree = "<group>"; };
+		88BB0E4F2A46B7FF00E56F56 /* ChainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainViewController.swift; sourceTree = "<group>"; };
+		88BB0E512A46B92C00E56F56 /* FilterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModels.swift; sourceTree = "<group>"; };
+		88BB0E532A46BE4000E56F56 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		88BB0E552A46F94F00E56F56 /* FilterEventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEventBus.swift; sourceTree = "<group>"; };
+		97AF038DED0D4662B8D3935D /* Pods-MOONCIFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOONCIFilter.release.xcconfig"; path = "Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter.release.xcconfig"; sourceTree = "<group>"; };
 		A2A5F1AC2A4308AE00622F83 /* MOONCIFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOONCIFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A5F1AF2A4308AE00622F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2A5F1B12A4308AE00622F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65778E52B2D82F3ADD781D28 /* Pods_MOONCIFilter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5629D1BA42FBFCE3319C17E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81484E0364CC0D67D4D20762 /* Pods-MOONCIFilter.debug.xcconfig */,
+				97AF038DED0D4662B8D3935D /* Pods-MOONCIFilter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F9CA52FB8EC0E98AF8E570B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0632571F6B7D1540B6B17AD8 /* Pods_MOONCIFilter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A2A5F1A32A4308AD00622F83 = {
 			isa = PBXGroup;
 			children = (
 				A2A5F1AE2A4308AE00622F83 /* MOONCIFilter */,
 				A2A5F1AD2A4308AE00622F83 /* Products */,
+				5629D1BA42FBFCE3319C17E2 /* Pods */,
+				6F9CA52FB8EC0E98AF8E570B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +94,11 @@
 				A2A5F1BA2A4308AF00622F83 /* LaunchScreen.storyboard */,
 				A2A5F1BD2A4308AF00622F83 /* Info.plist */,
 				A2A5F1C32A430AEB00622F83 /* MainViewController.swift */,
+				88BB0E4D2A45FEAF00E56F56 /* photoPreview.swift */,
+				88BB0E4F2A46B7FF00E56F56 /* ChainViewController.swift */,
+				88BB0E532A46BE4000E56F56 /* DetailViewController.swift */,
+				88BB0E512A46B92C00E56F56 /* FilterModels.swift */,
+				88BB0E552A46F94F00E56F56 /* FilterEventBus.swift */,
 			);
 			path = MOONCIFilter;
 			sourceTree = "<group>";
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2A5F1C02A4308AF00622F83 /* Build configuration list for PBXNativeTarget "MOONCIFilter" */;
 			buildPhases = (
+				E58F07A3BD2C0F20D81ECD5A /* [CP] Check Pods Manifest.lock */,
 				A2A5F1A82A4308AE00622F83 /* Sources */,
 				A2A5F1A92A4308AE00622F83 /* Frameworks */,
 				A2A5F1AA2A4308AE00622F83 /* Resources */,
+				23B9E8509C4746360072C0D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -100,7 +141,7 @@
 				};
 			};
 			buildConfigurationList = A2A5F1A72A4308AD00622F83 /* Build configuration list for PBXProject "MOONCIFilter" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -129,14 +170,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23B9E8509C4746360072C0D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E58F07A3BD2C0F20D81ECD5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MOONCIFilter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2A5F1A82A4308AE00622F83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A2A5F1C42A430AEB00622F83 /* MainViewController.swift in Sources */,
+				88BB0E562A46F94F00E56F56 /* FilterEventBus.swift in Sources */,
+				88BB0E4E2A45FEAF00E56F56 /* photoPreview.swift in Sources */,
+				88BB0E502A46B80000E56F56 /* ChainViewController.swift in Sources */,
+				88BB0E522A46B92C00E56F56 /* FilterModels.swift in Sources */,
 				A2A5F1B02A4308AE00622F83 /* AppDelegate.swift in Sources */,
 				A2A5F1B22A4308AE00622F83 /* SceneDelegate.swift in Sources */,
+				88BB0E542A46BE4000E56F56 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +358,7 @@
 		};
 		A2A5F1C12A4308AF00622F83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81484E0364CC0D67D4D20762 /* Pods-MOONCIFilter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -280,7 +369,6 @@
 				INFOPLIST_FILE = MOONCIFilter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -299,6 +387,7 @@
 		};
 		A2A5F1C22A4308AF00622F83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97AF038DED0D4662B8D3935D /* Pods-MOONCIFilter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,7 +398,6 @@
 				INFOPLIST_FILE = MOONCIFilter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
