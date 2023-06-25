@@ -55,6 +55,7 @@ enum MAFTaskKeys: String {
 class MAFTransaction {
     
     static let shared = MAFTransaction()
+    private init() {}
     
     private var transList: [MAFTransaction.Trans?] = []
     

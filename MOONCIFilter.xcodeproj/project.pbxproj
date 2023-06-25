@@ -13,7 +13,7 @@
 		88BB0E522A46B92C00E56F56 /* FilterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E512A46B92C00E56F56 /* FilterModels.swift */; };
 		88BB0E542A46BE4000E56F56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E532A46BE4000E56F56 /* DetailViewController.swift */; };
 		88BB0E562A46F94F00E56F56 /* MAFTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E552A46F94F00E56F56 /* MAFTransaction.swift */; };
-		A2329C482A47EEDB00E5044C /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2329C472A47EEDB00E5044C /* CustomNavBar.swift */; };
+		A2329C482A47EEDB00E5044C /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2329C472A47EEDB00E5044C /* CustomNavigationView.swift */; };
 		A2329C4A2A47EF5800E5044C /* MAFColorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2329C492A47EF5800E5044C /* MAFColorAdapter.swift */; };
 		A2A5F1B02A4308AE00622F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F1AF2A4308AE00622F83 /* AppDelegate.swift */; };
 		A2A5F1B92A4308AF00622F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F1B82A4308AF00622F83 /* Assets.xcassets */; };
@@ -30,7 +30,7 @@
 		88BB0E532A46BE4000E56F56 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		88BB0E552A46F94F00E56F56 /* MAFTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFTransaction.swift; sourceTree = "<group>"; };
 		97AF038DED0D4662B8D3935D /* Pods-MOONCIFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOONCIFilter.release.xcconfig"; path = "Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter.release.xcconfig"; sourceTree = "<group>"; };
-		A2329C472A47EEDB00E5044C /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		A2329C472A47EEDB00E5044C /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		A2329C492A47EF5800E5044C /* MAFColorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFColorAdapter.swift; sourceTree = "<group>"; };
 		A2A5F1AC2A4308AE00622F83 /* MOONCIFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOONCIFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A5F1AF2A4308AE00622F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				88BB0E4F2A46B7FF00E56F56 /* ChainViewController.swift */,
 				88BB0E532A46BE4000E56F56 /* DetailViewController.swift */,
 				88BB0E512A46B92C00E56F56 /* FilterModels.swift */,
-				A2329C472A47EEDB00E5044C /* CustomNavBar.swift */,
+				A2329C472A47EEDB00E5044C /* CustomNavigationView.swift */,
 			);
 			path = MOONCIFilter;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 				88BB0E562A46F94F00E56F56 /* MAFTransaction.swift in Sources */,
 				A2329C4A2A47EF5800E5044C /* MAFColorAdapter.swift in Sources */,
 				88BB0E4E2A45FEAF00E56F56 /* photoPreview.swift in Sources */,
-				A2329C482A47EEDB00E5044C /* CustomNavBar.swift in Sources */,
+				A2329C482A47EEDB00E5044C /* CustomNavigationView.swift in Sources */,
 				88BB0E502A46B80000E56F56 /* ChainViewController.swift in Sources */,
 				88BB0E522A46B92C00E56F56 /* FilterModels.swift in Sources */,
 				A2A5F1B02A4308AE00622F83 /* AppDelegate.swift in Sources */,

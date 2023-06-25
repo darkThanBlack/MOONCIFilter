@@ -31,7 +31,7 @@ class FilterEventBus {
     }
 }
 
-protocol ChildsNavigationDelegate: AnyObject {
+protocol ChildsNavigationDelegate: UIViewController {
     
     func pushToChild(_ viewController: UIViewController?)
     
@@ -54,9 +54,8 @@ class MainViewController: UIViewController {
         let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addImageEvent(button:)))
         self.navigationItem.rightBarButtonItems = [addItem]
         
-        
         addChild(chainVC)
-        self.view.addSubview(chainVC.view)
+        view.addSubview(chainVC.view)
     }
     
     //MARK: Event
@@ -77,8 +76,7 @@ class MainViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: scrollView.bounds.size.width, height: preview.frame.maxY)
         
-        let cHeight = view.bounds.size.height * 0.3
-        chainVC.view.frame = CGRect(x: 0, y: view.bounds.maxY - cHeight + 8.0, width: view.bounds.size.width, height: cHeight - 8.0 - 34.0)
+        chainVC.view.frame = CGRect(x: 0, y: preview.frame.maxY + 8.0, width: view.bounds.size.width, height: view.bounds.maxY - (preview.frame.maxY + 8.0))
     }
     
     private func loadViews(in box: UIView) {

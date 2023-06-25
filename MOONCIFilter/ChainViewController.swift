@@ -34,8 +34,8 @@ class ChainViewController: UIViewController {
         box.addSubview(tableView)
     }
     
-    private lazy var customBar: CustomNavBar = {
-        let customBar = CustomNavBar()
+    private lazy var customBar: CustomNavigationView = {
+        let customBar = CustomNavigationView()
         customBar.title = "滤镜链"
         customBar.isRoot = true
         return customBar
