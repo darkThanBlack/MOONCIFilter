@@ -1,16 +1,34 @@
 PODS:
-  - SnapKit (5.6.0)
+  - DoraemonKit/Core (3.0.7):
+    - FMDB
+    - GCDWebServer
+    - GCDWebServer/WebDAV
+    - GCDWebServer/WebUploader
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - GCDWebServer/WebDAV (3.5.4):
+    - GCDWebServer/Core
+  - GCDWebServer/WebUploader (3.5.4):
+    - GCDWebServer/Core
 
 DEPENDENCIES:
-  - SnapKit
+  - DoraemonKit/Core (~> 3.0.4)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - SnapKit
+    - DoraemonKit
+    - FMDB
+    - GCDWebServer
 
 SPEC CHECKSUMS:
-  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  DoraemonKit: 32fb97f3aa82efa133111d193080ca5462cef135
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
 
-PODFILE CHECKSUM: 416648c046ce5d25c057954006c458d83b49f2e6
+PODFILE CHECKSUM: d6a2896aedbd0d98cdfd76b486b7ac455076fa38
 
 COCOAPODS: 1.12.1

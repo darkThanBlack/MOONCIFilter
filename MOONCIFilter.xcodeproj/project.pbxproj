@@ -7,31 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65778E52B2D82F3ADD781D28 /* Pods_MOONCIFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632571F6B7D1540B6B17AD8 /* Pods_MOONCIFilter.framework */; };
+		3DFE60FBC345218BC31863B1 /* Pods_MOONCIFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497859AAD4AF4DEA53B5CC37 /* Pods_MOONCIFilter.framework */; };
 		88BB0E4E2A45FEAF00E56F56 /* photoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E4D2A45FEAF00E56F56 /* photoPreview.swift */; };
 		88BB0E502A46B80000E56F56 /* ChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E4F2A46B7FF00E56F56 /* ChainViewController.swift */; };
 		88BB0E522A46B92C00E56F56 /* FilterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E512A46B92C00E56F56 /* FilterModels.swift */; };
 		88BB0E542A46BE4000E56F56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E532A46BE4000E56F56 /* DetailViewController.swift */; };
-		88BB0E562A46F94F00E56F56 /* FilterEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E552A46F94F00E56F56 /* FilterEventBus.swift */; };
+		88BB0E562A46F94F00E56F56 /* MAFTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB0E552A46F94F00E56F56 /* MAFTransaction.swift */; };
+		A2329C482A47EEDB00E5044C /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2329C472A47EEDB00E5044C /* CustomNavBar.swift */; };
+		A2329C4A2A47EF5800E5044C /* MAFColorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2329C492A47EF5800E5044C /* MAFColorAdapter.swift */; };
 		A2A5F1B02A4308AE00622F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F1AF2A4308AE00622F83 /* AppDelegate.swift */; };
-		A2A5F1B22A4308AE00622F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F1B12A4308AE00622F83 /* SceneDelegate.swift */; };
 		A2A5F1B92A4308AF00622F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F1B82A4308AF00622F83 /* Assets.xcassets */; };
 		A2A5F1BC2A4308AF00622F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F1BA2A4308AF00622F83 /* LaunchScreen.storyboard */; };
 		A2A5F1C42A430AEB00622F83 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F1C32A430AEB00622F83 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0632571F6B7D1540B6B17AD8 /* Pods_MOONCIFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOONCIFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		497859AAD4AF4DEA53B5CC37 /* Pods_MOONCIFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOONCIFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81484E0364CC0D67D4D20762 /* Pods-MOONCIFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOONCIFilter.debug.xcconfig"; path = "Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter.debug.xcconfig"; sourceTree = "<group>"; };
 		88BB0E4D2A45FEAF00E56F56 /* photoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoPreview.swift; sourceTree = "<group>"; };
 		88BB0E4F2A46B7FF00E56F56 /* ChainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainViewController.swift; sourceTree = "<group>"; };
 		88BB0E512A46B92C00E56F56 /* FilterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModels.swift; sourceTree = "<group>"; };
 		88BB0E532A46BE4000E56F56 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		88BB0E552A46F94F00E56F56 /* FilterEventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEventBus.swift; sourceTree = "<group>"; };
+		88BB0E552A46F94F00E56F56 /* MAFTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFTransaction.swift; sourceTree = "<group>"; };
 		97AF038DED0D4662B8D3935D /* Pods-MOONCIFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOONCIFilter.release.xcconfig"; path = "Target Support Files/Pods-MOONCIFilter/Pods-MOONCIFilter.release.xcconfig"; sourceTree = "<group>"; };
+		A2329C472A47EEDB00E5044C /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		A2329C492A47EF5800E5044C /* MAFColorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFColorAdapter.swift; sourceTree = "<group>"; };
 		A2A5F1AC2A4308AE00622F83 /* MOONCIFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOONCIFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A5F1AF2A4308AE00622F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2A5F1B12A4308AE00622F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A2A5F1B82A4308AF00622F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2A5F1BB2A4308AF00622F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2A5F1BD2A4308AF00622F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65778E52B2D82F3ADD781D28 /* Pods_MOONCIFilter.framework in Frameworks */,
+				3DFE60FBC345218BC31863B1 /* Pods_MOONCIFilter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +64,18 @@
 		6F9CA52FB8EC0E98AF8E570B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0632571F6B7D1540B6B17AD8 /* Pods_MOONCIFilter.framework */,
+				497859AAD4AF4DEA53B5CC37 /* Pods_MOONCIFilter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2329C4B2A47EF6200E5044C /* MAF */ = {
+			isa = PBXGroup;
+			children = (
+				88BB0E552A46F94F00E56F56 /* MAFTransaction.swift */,
+				A2329C492A47EF5800E5044C /* MAFColorAdapter.swift */,
+			);
+			path = MAF;
 			sourceTree = "<group>";
 		};
 		A2A5F1A32A4308AD00622F83 = {
@@ -88,8 +99,8 @@
 		A2A5F1AE2A4308AE00622F83 /* MOONCIFilter */ = {
 			isa = PBXGroup;
 			children = (
+				A2329C4B2A47EF6200E5044C /* MAF */,
 				A2A5F1AF2A4308AE00622F83 /* AppDelegate.swift */,
-				A2A5F1B12A4308AE00622F83 /* SceneDelegate.swift */,
 				A2A5F1B82A4308AF00622F83 /* Assets.xcassets */,
 				A2A5F1BA2A4308AF00622F83 /* LaunchScreen.storyboard */,
 				A2A5F1BD2A4308AF00622F83 /* Info.plist */,
@@ -98,7 +109,7 @@
 				88BB0E4F2A46B7FF00E56F56 /* ChainViewController.swift */,
 				88BB0E532A46BE4000E56F56 /* DetailViewController.swift */,
 				88BB0E512A46B92C00E56F56 /* FilterModels.swift */,
-				88BB0E552A46F94F00E56F56 /* FilterEventBus.swift */,
+				A2329C472A47EEDB00E5044C /* CustomNavBar.swift */,
 			);
 			path = MOONCIFilter;
 			sourceTree = "<group>";
@@ -114,7 +125,7 @@
 				A2A5F1A82A4308AE00622F83 /* Sources */,
 				A2A5F1A92A4308AE00622F83 /* Frameworks */,
 				A2A5F1AA2A4308AE00622F83 /* Resources */,
-				23B9E8509C4746360072C0D3 /* [CP] Embed Pods Frameworks */,
+				2CCA191A34E288608B9CE27F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,7 +182,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23B9E8509C4746360072C0D3 /* [CP] Embed Pods Frameworks */ = {
+		2CCA191A34E288608B9CE27F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,12 +229,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A5F1C42A430AEB00622F83 /* MainViewController.swift in Sources */,
-				88BB0E562A46F94F00E56F56 /* FilterEventBus.swift in Sources */,
+				88BB0E562A46F94F00E56F56 /* MAFTransaction.swift in Sources */,
+				A2329C4A2A47EF5800E5044C /* MAFColorAdapter.swift in Sources */,
 				88BB0E4E2A45FEAF00E56F56 /* photoPreview.swift in Sources */,
+				A2329C482A47EEDB00E5044C /* CustomNavBar.swift in Sources */,
 				88BB0E502A46B80000E56F56 /* ChainViewController.swift in Sources */,
 				88BB0E522A46B92C00E56F56 /* FilterModels.swift in Sources */,
 				A2A5F1B02A4308AE00622F83 /* AppDelegate.swift in Sources */,
-				A2A5F1B22A4308AE00622F83 /* SceneDelegate.swift in Sources */,
 				88BB0E542A46BE4000E56F56 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,9 +377,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J25KWTFJ2;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MOONCIFilter/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -394,9 +405,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J25KWTFJ2;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MOONCIFilter/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

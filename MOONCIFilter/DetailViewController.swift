@@ -10,23 +10,16 @@ import UIKit
 ///
 class DetailViewController: UIViewController {
     
-    private var cells: [ParamSliderCellDataSource] = []
+    var cells: [ParamSliderCellDataSource] = []
+    
+    weak var delegate: ChildsNavigationDelegate?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadViews(in: view)
-        
-        mocks()
-    }
-    
-    private func mocks() {
-        let models: [ParamSliderModel] = [
-            "inputBrightness"
-        ].compactMap { name in
-            return ParamSliderModel(name: name, min: -1, max: 1, def: 0)
-        }
-        cells = models
         
         tableView.reloadData()
     }
@@ -34,12 +27,24 @@ class DetailViewController: UIViewController {
     //MARK: View
     
     override func viewDidLayoutSubviews() {
-        tableView.frame = view.bounds
+        customBar.frame = CGRect(x: 0, y: 0, width: view.bounds.maxX, height: 44.0)
+        tableView.frame = CGRect(x: 0, y: customBar.frame.maxY, width: view.bounds.maxX, height: view.bounds.maxY - 44.0)
     }
     
     private func loadViews(in box: UIView) {
+        box.addSubview(customBar)
         box.addSubview(tableView)
     }
+    
+    private lazy var customBar: CustomNavBar = {
+        let customBar = CustomNavBar()
+        customBar.title = "滤镜参数"
+        customBar.isRoot = false
+        customBar.backHandler = { [weak self] in
+            self?.delegate?.popWithChild(self)
+        }
+        return customBar
+    }()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -75,8 +80,20 @@ extension DetailViewController: UITableViewDataSource {
         }
         if indexPath.row < cells.count {
             cell.configCell(model: cells[indexPath.row])
+            cell.delegate = self
         }
         return cell
+    }
+}
+
+extension DetailViewController: ParamSliderCellDelegate {
+    
+    func sliderValueDidChanged(_ cell: UITableViewCell) {
+        guard let index = tableView.indexPath(for: cell)?.row, index < cells.count else {
+            return
+        }
+        let item = cells[index]
+        
     }
 }
 
@@ -87,13 +104,14 @@ protocol ParamSliderCellDataSource: AnyObject {
     
     var sliderTitle: String? { get }
     
-    var sliderValue: Float { get }
+    var sliderCurrent: String? { get }
+    
+    var sliderValue: Float { get set }
 }
 ///
 protocol ParamSliderCellDelegate: AnyObject {
     
-    
-    
+    func sliderValueDidChanged(_ cell: UITableViewCell)
 }
 
 ///
@@ -101,13 +119,25 @@ class ParamSliderCell: UITableViewCell {
     
     weak var delegate: ParamSliderCellDelegate?
     
+    weak var model: ParamSliderCellDataSource?
+    
     func configCell(model: ParamSliderCellDataSource) {
+        self.model = model
+        
         titleLabel.text = model.sliderTitle
+        currentLabel.text = model.sliderCurrent
         slider.value = model.sliderValue
     }
     
     @objc private func sliderChangedEvent() {
+        model?.sliderValue = slider.value
         
+        titleLabel.text = model?.sliderTitle
+        currentLabel.text = model?.sliderCurrent
+        
+        FilterEventBus.shared.draw()
+        
+        setNeedsLayout()
     }
     
     //MARK: Life Cycle
@@ -126,31 +156,47 @@ class ParamSliderCell: UITableViewCell {
     
     //MARK: View
     
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 4+20+4+34+4)
+    }
+    
     override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return CGSize(width: size.width, height: 60.0)
+        return CGSize(width: size.width, height: 4+20+4+34+4)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         titleLabel.sizeToFit()
-        titleLabel.frame = CGRect(x: 16.0, y: 0, width: titleLabel.bounds.size.width, height: titleLabel.bounds.size.height)
+        titleLabel.frame = CGRect(x: 16.0, y: 4.0, width: titleLabel.bounds.size.width, height: 20.0)
         
-        let sSize = slider.sizeThatFits(CGSize(width: bounds.size.width - 32.0, height: bounds.size.height))
-        slider.frame = CGRect(x: 16.0, y: titleLabel.frame.maxY, width: sSize.width, height: sSize.height)
+        currentLabel.sizeToFit()
+        currentLabel.frame = CGRect(x: bounds.maxX - currentLabel.bounds.maxX - 16.0, y: 4.0, width: currentLabel.bounds.size.width, height: 20.0)
+        
+        slider.frame = CGRect(x: 16.0, y: titleLabel.frame.maxY + 4.0, width: bounds.maxX - 32.0, height: 34.0)
     }
     
     private func loadViews(in box: UIView) {
         box.addSubview(titleLabel)
+        box.addSubview(currentLabel)
         box.addSubview(slider)
     }
     
     private lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
-        titleLabel.textColor = .lightText
+        titleLabel.font = UIFont.systemFont(ofSize: 13.0, weight: .medium)
+        titleLabel.textColor = MAFColorAdapter.GrayA
         titleLabel.text = " "
         return titleLabel
+    }()
+    
+    private lazy var currentLabel: UILabel = {
+        let currentLabel = UILabel()
+        currentLabel.font = UIFont.systemFont(ofSize: 11.0, weight: .regular)
+        currentLabel.textColor = MAFColorAdapter.LightGrayA
+        currentLabel.text = " "
+        currentLabel.textAlignment = .right
+        return currentLabel
     }()
     
     private lazy var slider: UISlider = {

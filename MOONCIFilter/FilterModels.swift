@@ -9,19 +9,28 @@ import UIKit
 
 
 ///
-class FilterBaseModel {
+class FilterModel {
     
     let filter: CIFilter
     
-    init?(name: String) {
+    let sliders: [ParamSliderModel]
+    
+    init?(name: String, sliders: [ParamSliderModel]) {
         guard let f = CIFilter(name: name) else {
             return nil
         }
         self.filter = f
+        self.sliders = sliders
+    }
+    
+    func syncParams() {
+        sliders.forEach({ param in
+            filter.setValue(param.current, forKey: param.name)
+        })
     }
 }
 
-extension FilterBaseModel: FliterChainCellDataSource {
+extension FilterModel: FliterChainCellDataSource {
     
     var cellTitle: String? {
         return filter.name
@@ -31,6 +40,8 @@ extension FilterBaseModel: FliterChainCellDataSource {
 class ParamBaseModel {
     
     let name: String
+    
+    // todo: value / key
     
     init(name: String) {
         self.name = name
@@ -61,6 +72,11 @@ extension ParamSliderModel: ParamSliderCellDataSource {
     var sliderTitle: String? {
         return name
     }
+    
+    var sliderCurrent: String? {
+        return "滑块值: \(sliderValue), 实际值: \(current)"
+    }
+    
     /// [0, 1]
     var sliderValue: Float {
         set {

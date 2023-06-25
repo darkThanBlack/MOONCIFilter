@@ -7,33 +7,17 @@
 
 import UIKit
 
-protocol FilterChainDelegate: AnyObject {
-    
-    func pushToFilterDetail(with model: FilterBaseModel)
-}
-
-///FliterChain
+///
 class ChainViewController: UIViewController {
     
-    private var cells: [FilterBaseModel] = []
+    private var cells = FilterEventBus.shared.filters
+    
+    weak var delegate: ChildsNavigationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        
         loadViews(in: view)
-        
-        mocks()
-    }
-    
-    private func mocks() {
-        let models: [FilterBaseModel] = [
-            "CIColorControls"
-        ].compactMap { name in
-            return FilterBaseModel(name: name)
-        }
-        self.cells = models
         
         tableView.reloadData()
     }
@@ -41,16 +25,25 @@ class ChainViewController: UIViewController {
     //MARK: View
     
     override func viewDidLayoutSubviews() {
-        tableView.frame = view.bounds
+        customBar.frame = CGRect(x: 0, y: 0, width: view.bounds.maxX, height: 44.0)
+        tableView.frame = CGRect(x: 0, y: customBar.frame.maxY, width: view.bounds.maxX, height: view.bounds.maxY - 44.0)
     }
     
     private func loadViews(in box: UIView) {
+        box.addSubview(customBar)
         box.addSubview(tableView)
     }
     
+    private lazy var customBar: CustomNavBar = {
+        let customBar = CustomNavBar()
+        customBar.title = "滤镜链"
+        customBar.isRoot = true
+        return customBar
+    }()
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.backgroundColor = .lightGray
+        tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -67,12 +60,32 @@ class ChainViewController: UIViewController {
 
 extension ChainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detail = DetailViewController()
-        navigationController?.pushViewController(detail, animated: true)
+        if indexPath.row < cells.count {
+            let detailVC = DetailViewController()
+            detailVC.delegate = delegate
+            detailVC.cells = cells[indexPath.row].sliders
+            delegate?.pushToChild(detailVC)
+        }
     }
 }
 
 extension ChainViewController: UITableViewDataSource {
+    
+    
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let item = cells[sourceIndexPath.row]
+        cells.remove(at: sourceIndexPath.row)
+        cells.insert(item, at: destinationIndexPath.row)
+        tableView.moveRow(at: sourceIndexPath, to: destinationIndexPath)
+        
+        FilterEventBus.shared.draw()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count
     }

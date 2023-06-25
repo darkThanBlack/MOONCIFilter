@@ -8,8 +8,10 @@ use_frameworks!
 platform :ios, '12.0'
 
 target 'MOONCIFilter' do
-
-  pod 'SnapKit'
+  
+  pod 'DoraemonKit/Core', '~> 3.0.4', configurations: %w[Debug] # 必选
+  
+  # pod 'SnapKit'
   
 end
 
