@@ -86,11 +86,27 @@ class photoPreviewView: UIView {
                 let oldOrientation = image.imageOrientation
                 var result: CIImage? = ci
                 
+//                for (_, model) in FilterEventBus.shared.filters.enumerated() {
+//                    if let value = result {
+//                        model.filter.setValue(value, forKey: kCIInputImageKey)
+//                        model.syncParams()
+//                        result = model.filter.outputImage ?? model.filter.value(forKey: kCIOutputImageKey) as? CIImage
+//                    }
+//                }
+                
+                // test
                 for (_, model) in FilterEventBus.shared.filters.enumerated() {
-                    if let value = result {
-                        model.filter.setValue(value, forKey: kCIInputImageKey)
-                        model.syncParams()
-                        result = model.filter.outputImage ?? model.filter.value(forKey: kCIOutputImageKey) as? CIImage
+                    if let filter = CIFilter(name: model.name),
+                       let inputImage = result {
+                        filter.setValue(inputImage, forKey: kCIInputImageKey)
+                        model.sliders.forEach({ param in
+                            if param.current > param.min {
+                                filter.setValue(param.current, forKey: param.name)
+                            }
+                        })
+                        if let output = filter.outputImage ?? filter.value(forKey: kCIOutputImageKey) as? CIImage {
+                            result = output
+                        }
                     }
                 }
                 

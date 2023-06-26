@@ -20,8 +20,8 @@ class FilterEventBus {
             ParamSliderModel(name: "inputRadius", min: 0, max: 20, def: 1.69)
         ]),
         FilterModel(name: "CIColorControls", sliders: [
-            ParamSliderModel(name: "inputBrightness", min: 0.3, max: 0.7, def: 0.5),
-            ParamSliderModel(name: "inputContrast", min: 0, max: 4, def: 2),
+            ParamSliderModel(name: "inputBrightness", min: 0, max: 1, def: 0.5),  // [0.3, 0.7]
+            ParamSliderModel(name: "inputContrast", min: 1, max: 2, def: 1.5),
             ParamSliderModel(name: "inputSaturation", min: 0, max: 2, def: 1)
         ])
     ].compactMap({ $0 })
@@ -76,7 +76,7 @@ class MainViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: scrollView.bounds.size.width, height: preview.frame.maxY)
         
-        chainVC.view.frame = CGRect(x: 0, y: preview.frame.maxY + 8.0, width: view.bounds.size.width, height: view.bounds.maxY - (preview.frame.maxY + 8.0))
+        chainVC.view.frame = CGRect(x: 0, y: scrollView.frame.maxY + 8.0, width: view.bounds.size.width, height: view.bounds.maxY - (scrollView.frame.maxY + 8.0))
     }
     
     private func loadViews(in box: UIView) {

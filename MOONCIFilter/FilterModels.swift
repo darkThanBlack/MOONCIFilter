@@ -11,6 +11,8 @@ import UIKit
 ///
 class FilterModel {
     
+    let name: String
+    
     let filter: CIFilter
     
     let sliders: [ParamSliderModel]
@@ -19,13 +21,18 @@ class FilterModel {
         guard let f = CIFilter(name: name) else {
             return nil
         }
+        self.name = name
         self.filter = f
         self.sliders = sliders
     }
     
     func syncParams() {
         sliders.forEach({ param in
-            filter.setValue(param.current, forKey: param.name)
+            if param.current > param.min {
+                filter.setValue(param.current, forKey: param.name)
+            } else {
+                filter.setValue(nil, forKey: param.name)
+            }
         })
     }
 }
